@@ -1,79 +1,70 @@
-# Unified Campus Portal
+# Getting Started with Create React App
 
-A comprehensive web platform integrating academic and administrative services for students and faculty.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Features
+## Available Scripts
 
-- **Student & Faculty Dashboards**: Role-based access to personalized dashboards.
-- **Attendance Tracking**: Faculty can mark attendance, students can view their records.
-- **Assignment Submission**: Students submit assignments, faculty create and grade them.
-- **Notices & Announcements**: Faculty post notices targeted to specific groups.
-- **Result Management**: Faculty enter results, students view their grades.
+In the project directory, you can run:
 
-## Tech Stack
+### `npm start`
 
-- **Backend**: Node.js, Express, MongoDB, Socket.io
-- **Frontend**: React, React Router, Axios
-- **ML Service**: Python (Flask, for future analytics)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Setup Instructions
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### Prerequisites
-- Node.js (v14+)
-- MongoDB (local or cloud instance)
-- Python 3.7+ (for ML service)
+### `npm test`
 
-**Note**: If npm commands fail due to PowerShell execution policy, run `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` in PowerShell as admin.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### 1. Backend Setup
-```bash
-cd backend
-npm install
-# Create .env file with:
-# MONGO_URI=mongodb://localhost:27017/campus-portal
-# JWT_SECRET=your_super_secret_jwt_key_here
-npm start
-```
-Server runs on http://localhost:5000
+### `npm run build`
 
-### 2. Frontend Setup
-```bash
-cd frontend
-npm install
-npm start
-```
-App runs on http://localhost:3000
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### 3. ML Service Setup (Optional)
-```bash
-cd ml-service
-pip install -r requirements.txt
-python app.py
-```
-Service runs on http://localhost:5001
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### 4. Database
-- Start MongoDB locally or use a cloud service like MongoDB Atlas
-- Update MONGO_URI in backend/.env accordingly
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## API Endpoints
+### `npm run eject`
 
-- **Auth**: POST /api/auth/register, POST /api/auth/login
-- **Users**: GET /api/users (faculty only)
-- **Attendance**: POST /api/attendance (faculty), GET /api/attendance/student/:id
-- **Assignments**: POST /api/assignments (faculty), GET /api/assignments, POST /:id/submit (student), PUT /:id/grade/:studentId (faculty)
-- **Notices**: POST /api/notices (faculty), GET /api/notices
-- **Results**: POST /api/results (faculty), GET /api/results/student/:id
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## Usage
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-1. Open http://localhost:3000
-2. Register as student or faculty
-3. Login to access the portal
-4. Navigate through Attendance, Assignments, Notices, Results based on role
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## Future Enhancements
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-- File upload for assignments
-- Real-time notifications via Socket.io
-- ML analytics for attendance prediction
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
